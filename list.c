@@ -60,7 +60,7 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
   
-  return 18;
+  return NULL;
 }
 
 void * prevList(List * list) {
