@@ -150,3 +150,14 @@ Fri 19 Aug 2022 05:21:16 PM UTC:
  tests:  5|4
 total_score: 25/70
 47bf082
+Fri 19 Aug 2022 05:23:14 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:63:10: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   63 |   return 18;
+      |          ^~
+cc1: all warnings being treated as errors
+Compilation failed
+a11e132
