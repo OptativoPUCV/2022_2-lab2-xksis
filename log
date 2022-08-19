@@ -88,3 +88,17 @@ Fri 19 Aug 2022 05:10:08 PM UTC:
  tests:  2|5
 total_score: 15/70
 76fa6d5
+Fri 19 Aug 2022 05:10:24 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:57:15: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   57 |   return (list->next->data);
+      |               ^~
+list.c:58:1: error: control reaches end of non-void function [-Werror=return-type]
+   58 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8685f81
