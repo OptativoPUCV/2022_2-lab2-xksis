@@ -69,7 +69,7 @@ void * prevList(List * list) {
   else{
     return NULL;
   }
-  return (list->current);
+  return (list->current->prev);
 }
 
 void pushFront(List * list, void * data) {
