@@ -259,3 +259,18 @@ list.c:108:20: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 99fbb54
+Sun 21 Aug 2022 11:17:40 PM UTC: 
+ list.c | 14 +-------------
+ 1 file changed, 1 insertion(+), 13 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:97:9: error: unused variable ‘x’ [-Werror=unused-variable]
+   97 |   Node* x=createNode(data);
+      |         ^
+list.c: In function ‘pushCurrent’:
+list.c:104:9: error: unused variable ‘x’ [-Werror=unused-variable]
+  104 |   Node* x=createNode(data);
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+b1076cb
