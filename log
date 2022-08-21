@@ -173,3 +173,19 @@ Fri 19 Aug 2022 05:27:21 PM UTC:
  tests:  9|3
 total_score: 35/70
 43cc2ca
+Sun 21 Aug 2022 10:59:20 PM UTC: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:84:7: error: dereferencing ‘void *’ pointer [-Werror]
+   84 |   data->prev=list->head;
+      |       ^~
+list.c:84:7: error: request for member ‘prev’ in something not a structure or union
+list.c:89:7: error: dereferencing ‘void *’ pointer [-Werror]
+   89 |   data->prev=NULL;
+      |       ^~
+list.c:89:7: error: request for member ‘prev’ in something not a structure or union
+cc1: all warnings being treated as errors
+Compilation failed
+e1caa0f
