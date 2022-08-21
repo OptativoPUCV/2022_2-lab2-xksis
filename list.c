@@ -105,7 +105,7 @@ void pushCurrent(List * list, void * data) {
   if(list->head!=NULL){
     Node* puntero=list->head;
     int posicion=0;
-    while((posicion<list->current) && (puntero->next){
+    while((posicion<list->current) && (puntero->next)){
       puntero=puntero->next;
       posicion++;
     }

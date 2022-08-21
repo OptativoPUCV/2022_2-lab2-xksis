@@ -244,3 +244,18 @@ list.c:114:3: error: expected expression before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 fd48aba
+Sun 21 Aug 2022 11:15:55 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:97:9: error: unused variable ‘x’ [-Werror=unused-variable]
+   97 |   Node* x=createNode(data);
+      |         ^
+list.c: In function ‘pushCurrent’:
+list.c:108:20: error: comparison between pointer and integer [-Werror]
+  108 |     while((posicion<list->current) && (puntero->next)){
+      |                    ^
+cc1: all warnings being treated as errors
+Compilation failed
+99fbb54
