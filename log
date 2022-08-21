@@ -216,3 +216,9 @@ list.c:90:4: error: request for member ‘prev’ in something not a structure o
 cc1: all warnings being treated as errors
 Compilation failed
 cc5095d
+Sun 21 Aug 2022 11:05:13 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+9b49f5a
