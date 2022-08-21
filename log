@@ -222,3 +222,25 @@ Sun 21 Aug 2022 11:05:13 PM UTC:
  tests:  9|3
 total_score: 35/70
 9b49f5a
+Sun 21 Aug 2022 11:15:45 PM UTC: 
+ list.c | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:97:9: error: unused variable ‘x’ [-Werror=unused-variable]
+   97 |   Node* x=createNode(data);
+      |         ^
+list.c: In function ‘pushCurrent’:
+list.c:108:20: error: comparison between pointer and integer [-Werror]
+  108 |     while((posicion<list->current) && (puntero->next){
+      |                    ^
+list.c:108:54: error: expected ‘)’ before ‘{’ token
+  108 |     while((posicion<list->current) && (puntero->next){
+      |          ~                                           ^
+      |                                                      )
+list.c:114:3: error: expected expression before ‘}’ token
+  114 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+fd48aba
