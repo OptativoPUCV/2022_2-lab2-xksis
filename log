@@ -189,3 +189,30 @@ list.c:89:7: error: request for member ‘prev’ in something not a structure o
 cc1: all warnings being treated as errors
 Compilation failed
 e1caa0f
+Sun 21 Aug 2022 11:04:52 PM UTC: 
+ list.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:84:3: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   84 |   Nodo* x=createNode(data);
+      |   ^~~~
+      |   Node
+list.c:84:11: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   84 |   Nodo* x=createNode(data);
+      |           ^~~~~~~~~~
+list.c:85:4: error: request for member ‘next’ in something not a structure or union
+   85 |   x->next=list->head;
+      |    ^~
+list.c:87:21: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   87 |     list->head->prev=x;
+      |                     ^
+list.c:89:13: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   89 |   list->head=x;
+      |             ^
+list.c:90:4: error: request for member ‘prev’ in something not a structure or union
+   90 |   x->prev=NULL;
+      |    ^~
+cc1: all warnings being treated as errors
+Compilation failed
+cc5095d
