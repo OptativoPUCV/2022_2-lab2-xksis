@@ -274,3 +274,14 @@ list.c:104:9: error: unused variable ‘x’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 b1076cb
+Sun 21 Aug 2022 11:17:56 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:97:9: error: unused variable ‘x’ [-Werror=unused-variable]
+   97 |   Node* x=createNode(data);
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+e3e1901
