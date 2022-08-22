@@ -103,8 +103,8 @@ void pushCurrent(List * list, void * data) {
     list->head=posicion;
   }
   else{
-    while(list->current->next){
-      list->current=list->current->next;
+    while(list->head->next){
+      list->head=list->head->next;
     }
     posicion->next=list->current->next;
     list->current->next=posicion;
