@@ -98,9 +98,6 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-  Node* posicion=createNode(data);
-  if(!list->current->prev)return NULL;
-  
   
 }
 

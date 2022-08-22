@@ -492,3 +492,9 @@ list.c:101:9: error: unused variable ‘posicion’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3e9bdbf
+Mon 22 Aug 2022 01:48:11 AM UTC: 
+ list.c | 3 ---
+ 1 file changed, 3 deletions(-)
+ tests:  9|3
+total_score: 35/70
+920ec30
