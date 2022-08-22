@@ -668,3 +668,9 @@ list.c:139:40: error: expected identifier before ‘;’ token
       |                                        ^
 Compilation failed
 7d2c55f
+Mon 22 Aug 2022 02:54:24 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+ffde57d
