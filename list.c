@@ -123,24 +123,24 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  Node* posicion=list->current;
-  void* dato=posicion->data;
-  if(!posicion->prev)return NULL;
-  if(posicion==list->head){
-    posicion->next->prev=NULL;
-    list->head=posicion->next;
+  Node* actual=list->current;
+  void* dato=actual->data;
+  if(!list->head)return NULL;
+  if(!actual)return NULL;
+  if(actual!=list->tail && actual!=list->head){
+    actual->prev->next=actual->next;
+    actual->next->prev=actual->prev;
   }
   else{
-    if(posicion==list->tail){
-      posicion->prev->next=NULL;
-      list->tail=posicion->prev;
+    if(list->head!=list->tail && actual->next==NULL){
+      list->head=actual->next;
+      list->head->prev=NULL;
     }
     else{
-      posicion->prev->next=posicion->next->prev;
-      posicion->next->prev=posicion->prev->next;
+      return NULL;
     }
   }
-  free(posicion);
+  free(actual);
   return dato;
 }
 
