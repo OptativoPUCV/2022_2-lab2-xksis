@@ -138,9 +138,9 @@ void * popCurrent(List * list) {
       actual->prev->next=actual->next->prev;
       actual->next->prev=actual->prev->next;
     }
-    free(actual);
-    return dato;
   }
+  free(actual);
+  return dato;
   
 }
 
