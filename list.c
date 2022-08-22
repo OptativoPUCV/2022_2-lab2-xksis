@@ -125,23 +125,23 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   Node* actual=list->current;
   void* dato=actual->data;
-  
-  if(actual!=list->tail && actual!=list->head){
-    actual->prev->next=actual->next;
-    actual->next->prev=actual->prev;
+  if(actual==list->head){
+    actual->next->prev=NULL;
+    list->head=actual->next;
   }
   else{
-    if(list->head!=list->tail && actual->next==NULL){
-      list->head=actual->next;
-      list->head->prev=NULL;
+    if(actual==list->tail){
+      actual->prev->next=NULL;
+      list->tail=actual->prev;
     }
     else{
-      list=NULL;
-      return NULL;
+      actual->prev->next=actual->next->prev;
+      actual->next->prev=actual->prev->next;
     }
+    free(actual);
+    return dato;
   }
-  free(actual);
-  return dato;
+  
 }
 
 void cleanList(List * list) {
