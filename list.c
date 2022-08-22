@@ -106,6 +106,8 @@ void pushCurrent(List * list, void * data) {
   }
   else{
     list->tail=nodo;
+    nodo->next=NULL;
+    
     
   }
 }
