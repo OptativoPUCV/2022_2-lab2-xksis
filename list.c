@@ -100,7 +100,6 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   Node* posicion=list->current;
   if(list->head==NULL){
-    posicion->next=NULL;
     list->head=posicion;
   }
   else{
@@ -133,8 +132,8 @@ void * popCurrent(List * list) {
       list->tail=posicion->prev;
     }
     else{
-      posicion->prev->next=posicion->next;
-      posicion->next->prev=posicion->prev;
+      posicion->prev->next=posicion->next->prev;
+      posicion->next->prev=posicion->prev->next;
     }
   }
   free(posicion);
