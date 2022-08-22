@@ -420,3 +420,16 @@ Mon 22 Aug 2022 01:14:01 AM UTC:
  tests:  9|3
 total_score: 35/70
 d33bea5
+Mon 22 Aug 2022 01:14:14 AM UTC: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:136:42: error: expected ‘;’ before ‘posicion’
+  136 |       posicion->prev->next=posicion->next
+      |                                          ^
+      |                                          ;
+  137 |       posicion->next->prev=posicion->prev
+      |       ~~~~~~~~                            
+Compilation failed
+52c837b

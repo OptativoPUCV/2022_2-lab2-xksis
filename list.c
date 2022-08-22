@@ -124,7 +124,7 @@ void * popCurrent(List * list) {
   void* dato=posicion->data;
   if(!posicion->prev)return NULL;
   if(posicion==list->head){
-    
+    posicion->next->prev=NULL;
     list->head=posicion->next;
   }
   else{
@@ -133,8 +133,8 @@ void * popCurrent(List * list) {
       list->tail=posicion->prev;
     }
     else{
-      posicion->prev->next=posicion->next->prev;
-      posicion->next->prev=posicion->prev->next;
+      posicion->prev->next=posicion->next
+      posicion->next->prev=posicion->prev
     }
   }
   free(posicion);
