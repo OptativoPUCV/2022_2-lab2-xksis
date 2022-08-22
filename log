@@ -303,3 +303,27 @@ Sun 21 Aug 2022 11:26:13 PM UTC:
  tests:  9|3
 total_score: 35/70
 cee6a6c
+Mon 22 Aug 2022 12:44:37 AM UTC: 
+ list.c | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:101:25: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  101 |   if(!list->head)return NULL;
+      |                         ^~~~
+list.c:100:6: note: declared here
+  100 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+list.c:102:39: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  102 |   if(list->current==list->tail)return NULL;
+      |                                       ^~~~
+list.c:100:6: note: declared here
+  100 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+list.c: In function ‘popCurrent’:
+list.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+  135 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+2e6a991
