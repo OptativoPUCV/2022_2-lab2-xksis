@@ -658,3 +658,13 @@ Mon 22 Aug 2022 02:51:17 AM UTC:
  tests:  11|1
 total_score: 55/70
 943dc02
+Mon 22 Aug 2022 02:54:18 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:139:40: error: expected identifier before ‘;’ token
+  139 |       actual->next->prev=actual->prev->;
+      |                                        ^
+Compilation failed
+7d2c55f
