@@ -133,8 +133,8 @@ void * popCurrent(List * list) {
       list->tail=posicion->prev;
     }
     else{
-      posicion->prev->next=posicion->next
-      posicion->next->prev=posicion->prev
+      posicion->prev->next=posicion->next;
+      posicion->next->prev=posicion->prev;
     }
   }
   free(posicion);
