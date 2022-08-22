@@ -122,8 +122,8 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   Node* posicion=list->current;
   void* dato=posicion->data;
-  
-  if(!posicion)return NULL;
+  if(!list->head)return NULL;
+  if(!posicion->prev)return NULL;
   if(posicion==list->head){
     posicion->next->prev=NULL;
     list->head=posicion->next;
