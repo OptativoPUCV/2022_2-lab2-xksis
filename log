@@ -522,3 +522,14 @@ Mon 22 Aug 2022 01:50:58 AM UTC:
  tests:  9|3
 total_score: 35/70
 4a18f16
+Mon 22 Aug 2022 02:08:18 AM UTC: 
+ list.c | 20 +++++++++++++++-----
+ 1 file changed, 15 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:100:64: error: ‘tail’ undeclared (first use in this function)
+  100 |   if(list->head!=NULL && list->current!=NULL && list->current!=tail){
+      |                                                                ^~~~
+list.c:100:64: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+deab1cd
