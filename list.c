@@ -89,23 +89,18 @@ void pushFront(List * list, void * data) {
     list->head->prev=x;
   }
   list->head=x;
+  x->prev=NULL;
 }
 
 void pushBack(List * list, void * data) {
   list->current = list->tail;
   pushCurrent(list,data);
-  
 }
 
 void pushCurrent(List * list, void * data) {
   Node* posicion=createNode(data);
-  if(list->tail==NULL){
-    list->tail=posicion;
-  }
-  else{
-    list->tail->next=posicion;
-  }
-  list->tail=posicion;
+  if(!list->current->prev)return NULL;
+  
   
 }
 
