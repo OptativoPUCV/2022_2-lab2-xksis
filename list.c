@@ -128,9 +128,9 @@ void * popCurrent(List * list) {
       posicion->prev->next=posicion->next->prev;
       posicion->next->prev=posicion->prev->next;
     }
-    free(posicion);
-    return dato;
   }
+  free(posicion);
+  return dato;
 }
 
 void cleanList(List * list) {

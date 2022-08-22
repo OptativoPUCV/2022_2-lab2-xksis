@@ -345,3 +345,17 @@ list.c:134:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 10db3ff
+Mon 22 Aug 2022 12:46:11 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:101:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  101 |   return NULL;
+      |          ^~~~
+list.c:100:6: note: declared here
+  100 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e523bae
